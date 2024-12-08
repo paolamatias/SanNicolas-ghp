@@ -22,6 +22,13 @@
   <link rel="apple-touch-icon" sizes="72x72" href="Logo solo .png">
   <link rel="apple-touch-icon" sizes="114x114" href="Logo solo .png">
 
+  <!--Slider-->
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 <body>
    
@@ -85,154 +92,122 @@
             background-color: #f8f9fa; /* Color de fondo de toda la página */
             margin: 0;
         }
+        /* Ajustar el tamaño de las imágenes */
+    /* Ajustar el tamaño de las imágenes */
+    .carousel-item img {
+      object-fit: cover; /* Asegura que la imagen llene el contenedor */
+      width: 100%;
+      height: 71vh; /* Ajusta la altura del carrusel */
+    }
+
+    /* Estilizar el texto */
+    .carousel-caption {
+      position: absolute;
+      top: 10%; /* Posicionar el texto arriba */
+      left: 10%; /* Alinear a la izquierda */
+      text-align: left; /* Texto alineado a la izquierda */
+    }
+
+    .carousel-caption h5 {
+      font-size: 4rem; /* Tamaño del texto */
+      font-family: 'Arial', sans-serif; /* Cambiar la fuente */
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    }
+
+    /* Espaciado para el navbar */
+    header {
+      margin-bottom: 20px;
+    }
+
+    /* Espaciado adicional para que el carrusel no sea cubierto */
+    #carouselExampleControls {
+      margin-top: 80px; /* Ajustar según el tamaño del navbar */
+    }
     </style>
     
     <!-- Navbar -->
     <div class="container-fluid p-0">
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-12">
-                <div class="menu_area alt-font">
-                    <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #f8f9fa;">
-                        <!-- Logo -->
-                        <a href="" class="navbar-brand d-flex align-items-center">
-                            <img src="logo.png" alt="Logo" style="max-height: 70px; width: auto;">
-                        </a>
-                        <!-- Toggler for mobile view -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- Navigation Menu -->
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href=""><strong>Inicio</strong></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href=""><strong>Quienes Somos</strong></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <strong>Servicios</strong>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="http://www.empresaflores.com/servicios/instalaciones">Instalaciones</a>
-                                        <a class="dropdown-item" href="http://www.empresaflores.com/servicios/asesoramiento-y-tramitacion">Asesoramiento y tramitación</a>
-                                        <a class="dropdown-item" href="http://www.empresaflores.com/servicios/servicio-de-calle">Servicio de Calle</a>
-                                        <a class="dropdown-item" href="http://www.empresaflores.com/servicios/traslados">Traslados</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="http://www.empresaflores.com/convenios"><strong>Convenios</strong></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="http://www.empresaflores.com/consultas"><strong>Preguntas frecuentes</strong></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="http://www.empresaflores.com/contacto"><strong>Contacto</strong></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #f8f9fa;">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                <img src="logo.png" alt="Logo" style="max-height: 70px; width: auto;">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link" href="#"><strong>Inicio</strong></a></li>
+                  <li class="nav-item"><a class="nav-link" href="#"><strong>Quienes Somos</strong></a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <strong>Servicios</strong>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Instalaciones</a></li>
+                      <li><a class="dropdown-item" href="#">Asesoramiento</a></li>
+                      <li><a class="dropdown-item" href="#">Servicio de Calle</a></li>
+                      <li><a class="dropdown-item" href="#">Traslados</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#"><strong>Contacto</strong></a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
+      </div>
+    </header>
+  
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <!-- Primera diapositiva -->
+        <div class="carousel-item active">
+          <img src="IMG1.jpeg" class="d-block w-100" alt="slide1">
+          <div class="carousel-caption">
+            <h5>60 años de Trayectoria</h5>
+          </div>
+        </div>
+  
+        <!-- Segunda diapositiva -->
+        <div class="carousel-item">
+          <img src="IMG2.jpeg" class="d-block w-100" alt="slide2">
+          <div class="carousel-caption">
+            <h5>Acompañando a las familias<br>Tucumanas</h5>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
 
-</div>       
-</header>
-    <!-- end header section -->
 
-
-<!-- start content section -->
-        
-<!-- start revolution slideshow-->
-<div class="rev_slider_wrapper fullscreen custom-controls">
-    <div id="rev_slider_2" class="rev_slider fullscreenbanner" style="display: none;" data-version="5.4.5">
-        <style>
-            /* Asegurarse de que las imágenes se ajusten completamente sin deformarse y sin recortarse */
-            .rev-slidebg {
-                object-fit: contain; /* Ajusta la imagen sin recortarla */
-                width: 100%;  /* Asegura que las imágenes ocupen todo el ancho */
-                height: 100%; /* Asegura que las imágenes ocupen todo el alto */
-            }
-
-            /* Configuración del contenedor del slider */
-            .rev_slider_wrapper {
-                position: relative;
-                width: 100%;
-                height: 100vh; /* Esto hará que el slider ocupe toda la altura de la pantalla */
-            }
-
-            .rev_slider {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-            }
-
-            .tp-caption {
-                z-index: 10; /* Asegura que el texto esté por encima de las imágenes */
-            }
-        </style>
-
-        <ul>
-            <li data-transition="parallaxtoleft">
-                <img src="IMG1.jpeg" alt="slide1" class="rev-slidebg">
-                <div class="tp-caption tp-resizeme alt-font font-weight-700" 
-                     style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);" 
-                     data-x="30" data-y="center" data-voffset="[-50,-120,-60,-20]" 
-                     data-fontsize="[58,48,36,32]" data-lineheight="[60,52,40,36]" 
-                     data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" 
-                     data-frames='[{"delay":1500, "speed":1400, "frame":"0", "from":"y:150px;opacity:0;", "ease":"Power3.easeOut", "to":"o:1;"}, {"delay":"wait", "speed":1000, "frame":"999", "to":"opacity:0;", "ease":"Power3.easeOut"}]' 
-                     data-splitout="none">60 años de Trayectoria
-                </div>
-            </li>
-            
-            <li data-transition="parallaxtoright">
-                <img src="IMG2.jpeg" alt="slide2" class="rev-slidebg">
-                <div class="tp-caption tp-resizeme alt-font font-weight-700" 
-                     style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);" 
-                     data-x="30" data-y="center" data-voffset="[-50,-120,-60,-20]" 
-                     data-fontsize="[58,48,36,32]" data-lineheight="[60,52,40,36]" 
-                     data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" 
-                     data-frames='[{"delay":1500, "speed":1400, "frame":"0", "from":"y:150px;opacity:0;", "ease":"Power3.easeOut", "to":"o:1;"}, {"delay":"wait", "speed":1000, "frame":"999", "to":"opacity:0;", "ease":"Power3.easeOut"}]' 
-                     data-splitout="none">Acompañando a las familias <br> Tucumanas
-                </div>
-            </li>
-            
-            
-    </div>
-</div>
-
-<script type="text/javascript" src="path/to/revslider.js"></script>
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    jQuery("#rev_slider_2").revolution({
-      sliderType: "standard",
-      sliderLayout: "fullscreen",
-      dottedOverlay: "none",
-      delay: 9000,
-      navigation: {
-        arrows: { 
-          style: "uranus", 
-          enable: true, 
-          hide_onmobile: false, 
-          hide_under: 600, 
-          hide_onleave: false, 
-          left: { h_offset: 30 }, 
-          right: { h_offset: 30 } 
-        }
-      },
-      responsiveLevels: [1240, 1024, 778, 480],
-      visibilityLevels: [1240, 1024, 778, 480],
-      gridwidth: [1170, 1024, 778, 480],
-      gridheight: [600, 600, 500, 400],
-    });
-  });
-</script>
 
 <!-- start testmonials section -->
-<section class="bg-img" data-overlay-dark="0" data-background="Fondo.jpg" style="background-size: cover; background-position: center; width: 100%; padding: 50px 0;">
+<section style="background-image: url(Fondo.jpg); 
+                background-size: cover; 
+                background-position: center; 
+                width: 100%; 
+                padding: 50px 0; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                text-align: center;">
     <div style="text-align: center;">
         <h2>
             <span style="color: #145091; font-family: 'Bitter', serif;">¿Necesitás ayuda?</span>
@@ -283,20 +258,29 @@
 
         <!-- end content section -->
         
-        <section class="bg-img" data-overlay-dark="0" data-background="Fondo.jpg" style="background-size: cover; background-position: center; width: 100%; padding: 50px 0; display: flex; justify-content: center; align-items: center; text-align: center;">
-            <div class="container">
-                <div class="section-heading" style="margin-bottom: 50px;">
-                    <a href="" target="_blank">
-                        <img src="logo.png" style="margin-bottom: 100px; height: 100px;">
-                    </a>
-                    <h5 style="color: #145091; font-family: 'Bitter', serif;">
-                        Somos Empresa San Nicolás.
-                        <br>
-                        Seguimos presentes siendo parte de tu día a día, como siempre.
-                    </h5>
-                </div>                
-            </div>
-        </section>
+        <section style="background-image: url(Fondo.jpg); 
+                background-size: cover; 
+                background-position: center; 
+                width: 100%; 
+                padding: 50px 0; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                text-align: center;">
+    <div class="container">
+        <div class="section-heading" style="margin-bottom: 50px;">
+            <a href="" target="_blank">
+                <img src="logo.png" style="margin-bottom: 100px; height: 100px;">
+            </a>
+            <h5 style="color: #145091; font-family: 'Bitter', serif;">
+                Somos Empresa San Nicolás.
+                <br>
+                Seguimos presentes siendo parte de tu día a día, como siempre.
+            </h5>
+        </div>                
+    </div>
+</section>
+
         
         
         
@@ -357,106 +341,9 @@
             </div>
         </div>
     </footer>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
 <!-- end footer section -->
-</div>
-
-
-<!-- start scroll to top -->
-<a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
-<!-- end scroll to top -->
-
-<!-- all js include start -->
-
-<!-- jquery -->
-<script src="http://www.empresaflores.com/js/jquery.min.js"></script>
-
-<!-- modernizr js -->
-<script src="http://www.empresaflores.com/js/modernizr.js"></script>
-
-<!-- bootstrap -->
-<script src="http://www.empresaflores.com/js/bootstrap.min.js"></script>
-
-<!-- navigation -->
-<script src="http://www.empresaflores.com/js/nav-menu.js"></script>
-
-<!-- serch -->
-<script src="http://www.empresaflores.com/js/search.js"></script>
-
-<!-- tab -->
-<script src="http://www.empresaflores.com/js/easy.responsive.tabs.js"></script>
-
-<!-- owl carousel -->
-<script src="http://www.empresaflores.com/js/owl.carousel.js"></script>
-
-<!-- jquery.counterup.min -->
-<script src="http://www.empresaflores.com/js/jquery.counterup.min.js"></script>
-
-<!-- stellar js -->
-<script src="http://www.empresaflores.com/js/jquery.stellar.min.js"></script>
-
-<!-- waypoints js -->
-<script src="http://www.empresaflores.com/js/waypoints.min.js"></script>
-
-<!-- tab js -->
-<script src="http://www.empresaflores.com/js/tabs.min.js"></script>
-
-<!-- countdown js -->
-<script src="http://www.empresaflores.com/js/countdown.js"></script>
-
-<!-- jquery.magnific-popup js -->
-<script src="http://www.empresaflores.com/js/jquery.magnific-popup.min.js"></script>
-
-<!-- isotope.pkgd.min js -->
-<script src="http://www.empresaflores.com/js/isotope.pkgd.min.js"></script>
-
-<!--  chart js -->
-<script src="http://www.empresaflores.com/js/chart.min.js"></script>
-
-<!-- revolution slider js files start -->
-<script src="http://www.empresaflores.com/js/rev_slider/jquery.themepunch.tools.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/jquery.themepunch.revolution.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.actions.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.carousel.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.migration.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.navigation.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.parallax.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="http://www.empresaflores.com/js/rev_slider/extensions/revolution.extension.video.min.js"></script>
-<!-- revolution slider js files end -->
-
-<!-- map js -->
-<script src="http://www.empresaflores.com/js/map.js?v=1.1"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZtTj2tvwsorp_DNPh3ZN_pMlSniet5h4&amp;callback=initMap" async defer></script>
-
-<!-- custom scripts -->
-<script src="http://www.empresaflores.com/js/main.js?v=1.5"></script>
-
-<!-- contact form scripts -->
-<script src="http://www.empresaflores.com/js/mailform/jquery.form.min.js"></script>
-<script src="http://www.empresaflores.com/js/mailform/jquery.rd-mailform.min.c.js"></script>
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
